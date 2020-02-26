@@ -1,0 +1,24 @@
+(1)
+g1 = ListPlot[Table[b[[i]], {i, 2, 9}], Joined -> True, 
+  PlotRange -> {All, {10, 50}},
+  Frame -> {{True, None}, {True, True}}, Axes -> False, 
+  PlotRangePadding -> 0
+    , ImagePadding -> 40, 
+  PlotLegends -> 
+   Placed[{"Temp1", "Temp2", "Temp3", "Temp4", "Temp5", "Temp6", 
+     "Temp7", "Temp8"}, Bottom]]
+PlotStyle -> Red,
+Frame -> {{True, None}, {True, 
+   True}}, Axes -> False, PlotRangePadding -> 0
+  , ImagePadding -> 40, PlotLegends -> Placed[{"Temperature"}, Bottom]
+  
+  (2)
+ g2 = ListPlot[b[[12]], Joined -> True, PlotRange -> {{0, 6000}, All}, 
+  FrameTicks -> All,
+  
+  PlotStyle -> Blue, Frame -> {{None, True}, {None, None}}, 
+  PlotLegends -> {Style["Motor", Blue]}, Axes -> False, 
+  PlotRangePadding -> 0
+    , ImagePadding -> 40]
+    (3)
+    Overlay[{g1, g2}]
